@@ -1,0 +1,103 @@
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<body class="container">
+
+    <div class="card">
+        <img src="{% static 'images/pat.jpg' %}" class="card-img-top" height="500px" width="400%">
+
+            <div class="card-body">
+                <h5 class="card-title" style="color:blue;text-align: center;" ><b>AGA KHAN HOSPITAL</b></h5>
+               <p class="card-text" style="color:blue"><i>Aga khan hospital is a private hospital cited at Nairobi.It was developed purposely to make people live comfortably by:</i></p>
+                <ul>
+                  <li> <p class="card-text" style="color:green"><i>Providing best services to all persons in need of our help.</i></p></li>
+                  <li><p class="card-text" style="color:green"><i>Through this much lives are saved and stong community is developed too</i></li>
+              </ul>
+
+              <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+
+                      <h5 class="card-title">Objectives</h5>
+                      <ul>
+                       <li><p class="card-text">providing best services.</p></li>
+                       <li><p class="card-text">Promoting health</p></li>
+                       <li><p class="card-text">Giving our patients best care</p></li>
+                       <li><p class="card-text">Developing a healthy community</p></li>
+                       <li> <p class="card-text">Sharing... </p></li>
+                    </ul>
+
+                    </div>
+                  </div>
+                </div><div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+
+                      <h5 class="card-title">What we offer:</h5>
+                      <ul>
+                     <li> <p class="card-text">Trainings to our staffs.</p></li>
+                     <li><p class="card-text">Appointments to our clients.</p></li>
+                     <li><p class="card-text">provision of wards to our patients.</p></li>
+                     <li><p class="card-text">Advices for medication.</p></li>
+                     <li><p class="card-text">Giving motivational speakers to our patients.</p></li>
+                    </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+      </div>
+      <!--next-->
+      <div class="row">
+
+        <div class="col-sm-5">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Working hours</h5>
+              <option value="numbers">8a.m - 1p.m</option>
+              <option value="numbers">2p.m - 12p.m</option>
+
+
+            </div>
+          </div>
+        </div>
+
+
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Pharmacy</h5>
+              <option value="text">Anti malaria</option>
+              <option value="text">Corona vaccine</option>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-sm-3">
+          <div class="row">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Labaratory</h5>
+              <option value="text">MDTR test</option>
+              <option value="text">HIV test</option>
+              <option value="text">Typhiod test</option>
+              <option value="text">HBP test</option>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <form>
+</body>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'hospital/base.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+<body>
+      <div id="demo" class="container">
+        <br><br>
+        {% if messages %}
+        {% for message in messages %}
+        <div style="margin-top:5rem;" class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">{{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        <br><br>
+      <img src="{% static 'images/2017-03-16.jpg' %}" class="rounded mx-auto d-block" alt="Responsive" style="height: 300px; width: 100%;" >
+
+
+      <form class="form-inline my-2 my-lg-0" method="POST">
+        {% csrf_token %}
+        <div class="container">
+               <p style="text-align: center;color:black;"><b>Have an appointment?</b></p><br>
+                <center>
+                    <input class="float-left" cols="80" rows="1.0"  placeholder="Appointment" name="message">
+                    <button class="btn btn-primary float-right" type="submit">Submit form</button>
+                </center>
+          </div>
+      </form><br>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+                <ul class="list-group">
+                    <b>Stock available:</b>
+                    <li class="list-group-item">Anti-malaria 500gs</li>
+                    <li class="list-group-item">Corona vaccine 200gs</li>
+                    <li class="list-group-item">yellow fever vaccine 300gs</li>
+                    <li class="list-group-item">Polio vaccine 700gs</li>
+                    <li class="list-group-item">ABZ tablets 150gs</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+
+                <ul class="list-group">
+                    <b>Doctors present:</b>
+                    <li class="list-group-item">John Muia</li>
+                    <li class="list-group-item">Patrick Muasa</li>
+                    <li class="list-group-item">Jackson Muthomi</li>
+                    <li class="list-group-item">Nyadhi Joshua</li>
+                    <li class="list-group-item">Marry Dzombo</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </div><br><br>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+                <ul class="list-group">
+                    <b>Strategies on progress:</b>
+                    <li class="list-group-item">Increase the stock of drags by 5%</li>
+                    <li class="list-group-item">Increase the number of cleaners by 2%</li>
+                    <li class="list-group-item">Build five extra rooms to accommodate more patients.</li>
+                    <li class="list-group-item">Raise the number of Doctors by 10%</li>
+                    <li class="list-group-item">Standerdize the diet for patients.</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+                <ul class="list-group">
+                    <b>Diseases treated:</b>
+                    <li class="list-group-item">Malaria</li>
+                    <li class="list-group-item">HIV/Aids</li>
+                    <li class="list-group-item">Polio Infections</li>
+                    <li class="list-group-item">Corona</li>
+                    <li class="list-group-item">Yellow Fever</li>
+                  </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</body>
+
+{% endblock %}

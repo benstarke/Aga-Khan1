@@ -1,0 +1,36 @@
+/*homepage*/
+footer{
+    background-color: black;
+    text-align: center;
+}
+
+ul li{
+    margin-left: 0px;
+    color:green ;
+
+ }
+ h5{
+     color: blue;
+ }
+ /*p{
+     color: green;
+ }
+ about service signup */
+ nav li{
+    /*margin: 50px;*/
+}
+/*li a{
+    color:white;
+    font-size:20px;
+}*/
+li a:hover{
+    background-color:#777;
+    color: white;
+    border-radius: 4px;
+}
+nav{
+    background-color: black;
+}
+
+#muia{background-color: skyblue;}
+

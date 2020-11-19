@@ -1,0 +1,81 @@
+{% extends 'hospital/base.html' %}
+{% load static %}
+
+{% block content %}
+<!--Messages-->
+{% if messages %}
+{% for message in messages %}
+<div style="margin-top:5rem;" class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">{{ message }}
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+{% endfor %}
+{% endif %}
+<br><br><br>
+<div id="muia">
+  <center>
+    <form method="POST">
+      {% csrf_token %}
+        <h3>REGISTRATION FORM</h3>
+
+        <div class="col-7">
+          <label>FullName:</label><br>
+          <input type="text" class="form-control" placeholder="Full Name" name="first_name">
+        </div>
+
+        <div class="col-7">
+          <label>Email:</label><br>
+          <input type="email" class="form-control" placeholder="Email" name="email">
+        </div>
+
+        <div class="col-7">
+          <label>Name:</label><br>
+          <input type="text" class="form-control" placeholder=" Name" name="name">
+        </div>
+
+        <div class="col-7">
+          <label>Gender:</label><br>
+          <select class="form-control form-control-lg" name="Gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div class="col-7">
+          <label>Date of Birth:</label><br>
+          <input type="date" class="form-control" placeholder="Birth Date" name="birth_date">
+        </div>
+
+        <div class="col-7">
+          <label>Location:</label><br>
+          <input type="text" class="form-control" placeholder="Location" name="location">
+        </div>
+
+        <div class="col-7">
+          <label>Password:</label><br>
+          <input type="password" class="form-control" placeholder="Password" name="password1">
+        </div>
+
+        <div class="col-7">
+          <label>Password Confirmation:</label><br>
+          <input type="password" class="form-control" placeholder="Confirm" name="password2">
+        </div>
+
+       <div>
+         <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+       </div>
+
+       <div>
+         <br><br>
+         <p>
+           Have an account?
+           <button type="button" class="btn btn-primary"><a href="{% url 'login' %}" style="color:white;">Login</a></button>
+         </p>
+
+       </div>
+    </form>
+  </center>
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'hospital/base.html' %}
+{% block content %}
+<br><br/>
+{% if messages %}
+{% for message in messages %}
+<div style="margin-top:5rem;" class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">{{ message }}
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+{% endfor %}
+{% endif %}
+
+<center>
+	<h2>MAKE AN APPOINTMENT</h2>
+
+	  <form method="POST">
+		  {% csrf_token %}
+		  <div class="form-column align-items-left">
+			  <div class="col-3">
+				  <label  for="inputname">First name:</label>
+					<input type="text" class="form-control" id="inputname" placeholder="Your first name" name="Fname" required>
+				</div>
+
+				<div class="col-3">
+				  <label for="inputname">Last name:</label>
+				  <input type="text" class="form-control" id="" placeholder="Your last name" name="Lname" required>
+				</div>
+
+
+				<div class="col-3">
+				  <label for="id">Id number:</label>
+				  <input type="numbers" class="form-control" placeholder="Your id number" name="id_number" required>
+				</div>
+				<div class="col-3">
+				  <label for="inputnames">Gender:</label>
+				  <select class="custom-select" name="Gender" required>
+					<option>Male</option>
+					<option>female</option>
+					<option>other</option>
+				  </select>
+				</div>
+				<div class="col-3">
+				  <label for="inputname">Type of disease:</label>
+				  <select class="custom-select" name="Typeofdisease" required>
+					<option value="text">Malaria</option>
+					<option value="text">Diabetes</option>
+					<option value="text">Typhoid</option>
+					<option value="text">Athritis</option>
+					<option value="text">HBP</option>
+					<option value="text">Corona</option>
+					<option value="text">Yellow fever</option>
+					<option value="text">non of the above</option>
+				  </select>
+				</div>
+
+				<div class="col-3">
+				  <label for="exampleFormControlTextarea1">Message:</label>
+				  <textarea class="form-control" id="FormControlTextarea" name="message" rows="2" cols="3"></textarea>
+				</div>
+			</div>
+			  <div class="col-3">
+			   <button class="btn btn-primary" type="submit">Submit form</button>
+			  </div>
+		  </div>
+
+		</form>
+	  </center>
+{% endblock %}
