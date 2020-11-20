@@ -96,6 +96,8 @@ class Doctor(models.Model):
     #patient_id = models.IntegerField()
     doctor_field = models.CharField(max_length=255)
     appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
+    def __str__(self):
+        return self.doctor_name
 
 class Hospital(models.Model):
     Doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
@@ -114,3 +116,5 @@ class Services(models.Model):
     description = models.TextField(max_length=255)
     treatment = models.TextField()
     drugs = models.CharField(max_length=255)
+    def __str__(self):
+        return self.service_name
