@@ -24,12 +24,12 @@ def about(request):
 
 
 def search(request):
-    query = request.GET.get('q')
+    q = request.GET.get('q')
     if query:
-        search_results = Services.objects.filter(Q(drugs__icontains=query)|Q(descrption=query)
+        search_results = Services.objects.filter(Q(drugs__icontains=q)|Q(description=q)
         return render(request, 'hospital/search_results.html','search_results':search_results)
     else:
-        messages.info(request,'no results found for {}',format(query))
+        messages.info(request,'no results found for {}',format(q))
 
 
 
