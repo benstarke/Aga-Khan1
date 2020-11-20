@@ -39,8 +39,8 @@
 			  </li>
 			{% endif %}
 		</ul>
-	  <form class="form-inline my-2 my-lg-0">
-		<input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+	  <form class="form-inline my-2 my-lg-0 action="{% url 'search_results' %}" method="get"">
+		<input class="form-control mr-sm-2 " type="search" placeholder="Search for" aria-label="Search" name="q">
 	  </form>
 	</div>
   </nav>

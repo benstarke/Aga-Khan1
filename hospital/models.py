@@ -106,3 +106,11 @@ class Hospital(models.Model):
     email = models.EmailField()
     #doctor_id = models.IntegerField()
 
+class Services(models.Model):
+    Doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    #Patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    service_name = models.CharField(max_length=255)
+    #patient_id = models.IntegerField()
+    description = models.TextField(max_length=255)
+    treatment = models.TextField()
+    drugs = models.CharField(max_length=255)

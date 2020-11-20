@@ -1,0 +1,11 @@
+{% extends 'hospital/base.html' %}
+{% load static %}
+
+{% block content %}
+{% for item in object_list %}
+{{item.service_name}}
+{{item.description}}
+{{item.treatment}}
+{{item.drugs}}
+{% endfor %}
+{%endblock %}

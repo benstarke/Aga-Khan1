@@ -8,6 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse
+from django.views.generic import  ListView,View,CreateView
 
 from .models import *
 #from .forms import RegistrationForm
@@ -21,6 +22,18 @@ def index(request):
 def about(request):
 	return render(request,'hospital/about.html')
 
+
+class SearchResultsView(ListView):
+    model = Services
+    template_name = 'hospital/search_results.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Item.objects.filter(
+            Q(service_name__icontains=query) | Q(drugs__icontains=query)|Q
+            (description__icontains=query)
+        )
+        return object_list
 
 def service(request):
 	if request.method == 'POST':
