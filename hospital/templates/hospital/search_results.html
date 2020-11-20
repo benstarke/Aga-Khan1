@@ -4,7 +4,7 @@
 {% block content %}
 <br><br><br>
 <h1></h1>
-{% if item  %}
+
 {% for item in object_list %}
 <div class="container">
   <div id="content">
@@ -17,14 +17,15 @@
   </div>
 </div>
 <br><br><br>
-  {% endfor %}
 
+<!--
   <div class="container text-">
     <div class="alert alert-success" role="alert">
       <p>No such medicine at the moment</p>
       <p>Thanks for your trust in our services</p>
     </div>
   </div>
-  {% endif %}
+  -->
+  {% endfor %}
 
 {%endblock %}
