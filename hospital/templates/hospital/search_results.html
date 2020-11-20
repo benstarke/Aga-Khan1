@@ -19,8 +19,12 @@
 <br><br><br>
   {% endfor %}
   {% else %}
-  <p>No such medicine at the moment</p>
-  <p>Thanks for your trust in our services</p>
+  <div class="container text-">
+    <div class="alert alert-success" role="alert">
+      <p>No such medicine at the moment</p>
+      <p>Thanks for your trust in our services</p>
+    </div>
+  </div>
   {% endif %}
 
 {%endblock %}
