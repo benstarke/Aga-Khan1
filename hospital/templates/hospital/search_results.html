@@ -1,13 +1,14 @@
 {% extends 'hospital/base.html' %}
 {% load static %}
-<br><br><br>
+
 {% block content %}
+<br><br><br>
 <h1>Search Results</h1>
 {% for item in object_list %}
 {{item.service_name}}
 {{item.description}}
 {{item.treatment}}
 {{item.drugs}}
+<br><br><br>
 {% endfor %}
 {%endblock %}
-<br><br><br>
