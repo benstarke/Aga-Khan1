@@ -29,7 +29,7 @@ class SearchResultsView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Item.objects.filter(
+        object_list = Services.objects.filter(
             Q(service_name__icontains=query) | Q(drugs__icontains=query)|Q
             (description__icontains=query)
         )
