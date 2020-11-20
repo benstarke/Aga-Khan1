@@ -4,8 +4,8 @@
 {% block content %}
 <br><br><br>
 <h1></h1>
+{% if item  %}
 {% for item in object_list %}
-
 <div class="container">
   <div id="content">
     <h1>Search Results</h1>
@@ -13,10 +13,11 @@
     <p>{{item.treatment}}</p>
     <h2>{{item.service_name}}</h2>
     <p>{{item.description}}</p>
-    <cite style="color: cyan;"><i>By Dr.</i>{{item.Doctor}}, Aga-Khan</cite>
+    <cite style="color: skyblue;"><i>By </i>{{item.Doctor}}, Aga-Khan</cite>
   </div>
 </div>
 <br><br><br>
   {% endfor %}
+  {% endif %}
 
 {%endblock %}
