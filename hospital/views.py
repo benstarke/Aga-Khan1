@@ -9,7 +9,7 @@ from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView
 from django.urls import reverse
 from django.views.generic import  ListView,View,CreateView
-
+from django.db.models import Q
 from .models import *
 #from .forms import RegistrationForm
 

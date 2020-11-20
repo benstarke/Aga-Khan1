@@ -1,6 +1,6 @@
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from django.db.models import Q
+
 from  .import views
 from .views import *
 
