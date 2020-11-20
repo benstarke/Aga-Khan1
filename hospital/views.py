@@ -23,6 +23,27 @@ def about(request):
 	return render(request,'hospital/about.html')
 
 
+def search(request):
+    query = request.GET.get('q')
+    if query:
+        search_results = Services.objects.filter(Q(drugs__icontains=query)|Q(descrption=query)
+        return render(request, 'hospital/search_results.html','search_results':search_results)
+    else:
+        messages.info(request,'no results found for {}',format(query))
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 class SearchResultsView(ListView):
     model = Services
     template_name = 'hospital/search_results.html'
@@ -33,7 +54,7 @@ class SearchResultsView(ListView):
             Q(service_name__icontains=query) | Q(drugs__icontains=query)|Q
             (description__icontains=query)
         )
-        return object_list
+        return object_list'''
 
 def service(request):
 	if request.method == 'POST':
