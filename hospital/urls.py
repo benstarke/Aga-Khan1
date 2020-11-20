@@ -10,8 +10,8 @@ urlpatterns = [
     path('service/',views.service,name='service'),
     path('appointment/',views.appointment,name='appointment'),
     #path('signup/',RegistrationView.as_view(),name='signup'),
-    #path('search/', SearchResultsView.as_view(), name='search_results'),
-    path('search/',views.search,name='search'),
+    path('search/', SearchResultsView.as_view(), name='search_results'),
+    #path('search/',views.search,name='search'),
     path('signup/',views.signup,name='signup'),
 	path('accounts/',include('django.contrib.auth.urls')),
 ]
