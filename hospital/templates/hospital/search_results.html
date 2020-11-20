@@ -4,15 +4,15 @@
 {% block content %}
 <br><br><br>
 
-{% for q in search_results %}
+{% for item in object_list %}
 <div class="container">
   <div id="content">
     <h1>Search Results</h1>
-    <h2>{{q.drugs}}</h2>
-    <p>{{q.treatment}}</p>
-    <h2>{{q.service_name}}</h2>
-    <p>{{q.description}}</p>
-    <cite style="color: skyblue;"><i>By </i>{{q.Doctor}}, Aga-Khan</cite>
+    <h2>{{item.drugs}}</h2>
+    <p>{{item.treatment}}</p>
+    <h2>{{item.service_name}}</h2>
+    <p>{{item.description}}</p>
+    <cite style="color: skyblue;"><i>By </i>{{item.Doctor}}, Aga-Khan</cite>
   </div>
 </div>
 <br><br><br>
