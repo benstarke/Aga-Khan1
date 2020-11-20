@@ -1,7 +1,7 @@
 
 {% block content %}
 
-<nav class="container navbar  navbar-expand-lg fixed-top navbar-dark scrolling-navbar>
+<nav class="container navbar  navbar-expand-lg fixed-top navbar-dark scrolling-navbar">
 	<a class="navbar-brand waves-effect text-blue" href="{% url 'index' %}" target="_blank">Aga-Khan</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 	aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +39,13 @@
 			  </li>
 			{% endif %}
 		</ul>
-	  <form class="form-inline my-2 my-lg-0 action="{% url 'search_results' %}" method="get">
+	  <!--<form class="form-inline my-2 my-lg-0 action="{% url 'search_results' %}" method="get">
 		<input class="form-control mr-sm-2 " type="search" placeholder="Search for" aria-label="Search" name="q">
+	  </form>-->
+	  <form class="form-inline" action="{% url 'search_results' %}" method="get">
+		<div class="md-form my-0">
+		  <input name="q" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+		</div>
 	  </form>
 	</div>
   </nav>
